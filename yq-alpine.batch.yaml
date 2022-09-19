@@ -1,0 +1,21 @@
+name: yq-doombot
+description: execute basic yq steps and commit to DaedalusG/yq-batch-test
+
+on:
+  - repositoriesMatchingQuery: repo:^github\.com/DaedalusG/yq-batch-test$
+
+# In each repository, run this command. Each repository's resulting diff is captured.
+steps:  
+  - run: |
+      apk add yq --repository=http://dl-cdn.alpinelinux.org/alpine/edge/community
+      yq -i '.author.name = "I am Dr Doom, I can prove it to you!"' test.yaml
+      yq -i '.co-author.name = "All hail Doom, Destroyer of Worlds!"' test.yaml
+    container: alpine:3
+
+# Describe the changeset (e.g., GitHub pull request) you want for each repository.
+changesetTemplate:
+  title: who is doombot really
+  body: automated yq entry
+  branch: main
+  commit:
+    message: automated yq entry
