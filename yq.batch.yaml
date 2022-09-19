@@ -1,4 +1,4 @@
-name: yq-doombot
+name: yq-doombot-mfarah
 description: execute basic yq steps and commit to DaedalusG/yq-batch-test
 
 on:
