@@ -7,7 +7,7 @@ on:
 # In each repository, run this command. Each repository's resulting diff is captured.
 steps:  
   - run: |
-      yq -i '.author.name = "All Hail Doom, destroyer of worlds!"' test.yaml
+      yq -i '.author.name = "Doom is great! Doom is powerful!"' test.yaml
     container: mikefarah/yq:latest
 
 # Describe the changeset (e.g., GitHub pull request) you want for each repository.

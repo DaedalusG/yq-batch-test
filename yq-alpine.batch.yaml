@@ -10,6 +10,7 @@ steps:
       apk add yq --repository=http://dl-cdn.alpinelinux.org/alpine/edge/community
       yq -i '.author.name = "I am Dr Doom, I can prove it to you!"' test.yaml
       yq -i '.co-author.name = "All hail Doom, Destroyer of Worlds!"' test.yaml
+      yq -i '.editor.name = "You'd better check those figures Vic, I think you're off a thousandth! - Mr. Fantastic"' test.yaml
     container: alpine:3
 
 # Describe the changeset (e.g., GitHub pull request) you want for each repository.
