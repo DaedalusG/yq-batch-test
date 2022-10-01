@@ -1,1 +1,1 @@
-expect(React.isValidElement(React.jsx('div', {}))).toEqual(true);
+const alignToNicedTicks = intervalScaleProto.getTicks.call(alignToScale, true);
