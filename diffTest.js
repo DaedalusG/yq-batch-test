@@ -1,0 +1,1 @@
+expect(React.isValidElement(React.jsx('div', {}))).toEqual(true);
